@@ -36,29 +36,39 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             bindings = <
 &none       &kp N1       &kp N2  &kp N3          &kp N4           &kp N5  &none                                                            &none                  &kp N6  &kp N7            &kp N8               &kp N9   &kp N0                       &none
-&kp DELETE  &kp Q        &kp W   &kp E           &kp R            &kp T   &none                                                            &none                  &kp Y   &kp U             &kp I                &kp O    &kp P                        &kp DOUBLE_QUOTES
-&kp TAB     &hm LCTRL A  &kp S   &kp D           &kp F            &kp G   &none                 &none  &none         &none          &none  &none                  &kp H   &kp J             &kp K                &kp L    &hm RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp DELETE  &kp Q        &kp W   &kp E           &kp R            &kp T   &kp LG(C)                                                        &kp LG(Z)              &kp Y   &kp U             &kp I                &kp O    &kp P                        &kp DOUBLE_QUOTES
+&kp TAB     &hm LCTRL A  &kp S   &kp D           &kp F            &kp G   &kp LG(V)             &none  &none         &none          &none  &kp LS(LG(Z))          &kp H   &kp J             &kp K                &kp L    &hm RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp ESCAPE  &kp Z        &kp X   &hm LEFT_ALT C  &hm LEFT_META V  &kp B                                &kp HOME      &kp PAGE_UP                                  &kp N   &hm RIGHT_META M  &hm RIGHT_ALT COMMA  &kp DOT  &kp FSLH                     &kp BACKSPACE
-&none       &none        &none   &none           &sk LEFT_SHIFT           &hm LEFT_SHIFT SPACE  &sl 1  &kp END       &kp PAGE_DOWN  &sl 1  &hm RIGHT_SHIFT ENTER          &sk LEFT_SHIFT    &kp SPACE            &none    &kp GRAVE                    &none
+&none       &none        &none   &none           &sk LEFT_SHIFT           &hm LEFT_SHIFT SPACE  &sl 2  &kp END       &kp PAGE_DOWN  &sl 2  &hm RIGHT_SHIFT ENTER          &sk LEFT_SHIFT    &kp SPACE            &none    &kp GRAVE                    &none
             >;
         };
 
-        keypad {
+        WIN {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&none       &kp N1          &kp N2  &kp N3           &kp N4              &kp N5  &none                                                            &none                  &kp N6  &kp N7               &kp N8                &kp N9   &kp N0                   &none
+&kp DELETE  &kp Q           &kp W   &kp E            &kp R               &kp T   &kp LC(C)                                                        &kp LC(Z)              &kp Y   &kp U                &kp I                 &kp O    &kp P                    &kp DOUBLE_QUOTES
+&kp TAB     &hm LEFT_ALT A  &kp S   &kp D            &kp F               &kp G   &kp LC(V)             &none  &none         &none          &none  &kp LC(LS(Z))          &kp H   &kp J                &kp K                 &kp L    &hm RIGHT_ALT SEMICOLON  &kp SQT
+&kp ESCAPE  &kp Z           &kp X   &hm LEFT_META C  &hm LEFT_CONTROL V  &kp B                                &kp HOME      &kp PAGE_UP                                  &kp N   &hm RIGHT_CONTROL M  &hm RIGHT_META COMMA  &kp DOT  &kp FSLH                 &kp BACKSPACE
+&none       &none           &none   &none            &sk LEFT_SHIFT              &hm LEFT_SHIFT SPACE  &sl 2  &kp END       &kp PAGE_DOWN  &sl 2  &hm RIGHT_SHIFT ENTER          &sk LEFT_SHIFT       &kp SPACE             &none    &kp GRAVE                &none
             >;
         };
 
-        fn {
+        CHARS {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&none       &kp N1           &kp N2        &kp N3        &kp N4        &kp N5        &none                                                                     &none                  &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0         &none
+&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PIPE      &kp LG(C)                                                                 &kp LG(Z)              &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &kp DOUBLE_QUOTES
+&kp CARET   &kp N0           &kp MINUS     &kp PLUS      &kp EQUAL     &kp ASTERISK  &kp LG(V)             &none      &none         &none          &none       &kp LS(LG(Z))          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON      &kp SQT
+&kp TILDE   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                         &kp HOME      &kp PAGE_UP                                       &kp NON_US_BACKSLASH  &kp UNDERSCORE         &kp COMMA         &kp DOT            &kp FSLH       &kp BACKSPACE
+&none       &kp NUMBER_6     &kp N7        &kp N8        &kp N9                      &hm LEFT_SHIFT SPACE  &kp CARET  &kp END       &kp PAGE_DOWN  &kp DOLLAR  &hm RIGHT_SHIFT ENTER                        &sk LEFT_SHIFT         &kp SPACE         &kp PERCENT        &kp GRAVE      &kp QUESTION
+            >;
+        };
+
+        movement {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 0                                      &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
@@ -66,7 +76,7 @@
             >;
         };
 
-        mod {
+        win_movement {
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
