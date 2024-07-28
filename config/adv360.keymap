@@ -75,11 +75,11 @@
 
         WIN_MOV {
             bindings = <
-&none   &none   &none   &none   &none   &none   &none                                       &none   &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END          &kp LC(RIGHT_BRACKET)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp LC(MINUS)          &kp LC(LS(MINUS))
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans          &kp LC(LS(TAB))    &kp LC(TAB)      &trans           &trans                 &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                  &kp LA(LS(TAB))    &kp LA(TAB)      &trans           &trans                 &trans
+&none   &none   &none         &none   &none   &none   &none                                       &none   &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                  &none
+&trans  &trans  &trans        &trans  &trans  &trans  &none                                       &none   &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END          &kp LC(RIGHT_BRACKET)  &trans
+&trans  &trans  &kp LA(HOME)  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp LC(MINUS)          &kp LC(LS(MINUS))
+&trans  &trans  &trans        &trans  &trans  &trans                  &trans      &trans                  &trans          &kp LC(LS(TAB))    &kp LC(TAB)      &trans           &trans                 &trans
+&trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                  &kp LA(PAGE_DOWN)  &kp LA(PAGE_UP)  &trans           &trans                 &trans
             >;
         };
 
